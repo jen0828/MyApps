@@ -112,5 +112,4 @@ public class Program
     Console.WriteLine("3. Balance");
     Console.WriteLine("4. Exit");
   }
-
 }

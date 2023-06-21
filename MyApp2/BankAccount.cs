@@ -36,6 +36,4 @@ public class BankAccount
       Console.WriteLine("You're good to go! Thank you :)");
     }
   }
-
-
 }

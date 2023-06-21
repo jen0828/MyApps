@@ -8,8 +8,13 @@ public class BankAccount
   public string Owner { get; set; }
   public decimal Balance { get; }
 
+  private static int accountNumberSeed = 1234567890;
+
   public BankAccount(string name, decimal initialBalance)
   {
+    Number = accountNumberSeed.ToString();
+    accountNumberSeed++;
+
     Owner = name;
     Balance = initialBalance;
   }

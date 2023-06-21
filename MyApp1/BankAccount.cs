@@ -9,6 +9,7 @@ public class BankAccount
   public decimal Balance { get; }
 
   private static int accountNumberSeed = 1234567890;
+  private List<Transaction> allTransactions = new List<Transaction>();
 
   public BankAccount(string name, decimal initialBalance)
   {

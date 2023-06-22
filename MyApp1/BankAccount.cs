@@ -19,17 +19,15 @@ public class BankAccount
     }
   }
 
-  private static int accountNumberSeed = 1234567890;
-
-
+  private static int s_accountNumberSeed = 1234567890;
   private readonly decimal _minimumBalance;
 
   public BankAccount(string name, decimal initialBalance) : this(name, initialBalance, 0) { }
 
   public BankAccount(string name, decimal initialBalance, decimal minimumBalance)
   {
-    Number = accountNumberSeed.ToString();
-    accountNumberSeed++;
+    Number = s_accountNumberSeed.ToString();
+    s_accountNumberSeed++;
 
     Owner = name;
     _minimumBalance = minimumBalance;
@@ -48,7 +46,6 @@ public class BankAccount
     var deposit = new Transaction(amount, date, note);
     _allTransactions.Add(deposit);
   }
-
 
   public void MakeWithdrawal(decimal amount, DateTime date, string note)
   {

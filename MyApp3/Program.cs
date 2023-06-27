@@ -3,7 +3,6 @@
 Console.WriteLine("Creating an employee");
 Console.WriteLine("--------------------\n");
 
-// create an object
 Employee george = new Employee("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 30, EmployeeType.Manager);
 
 george.DisplayEmployeeDetails();

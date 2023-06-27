@@ -1,12 +1,21 @@
 ﻿using HRapp;
 
-int amount = 1234;
-int months = 12;
-int bonus = 1000;
+Console.WriteLine("Creating an employee");
+Console.WriteLine("--------------------\n");
 
-int yearlyWage = Utilities.CalculateYearlyWage(amount, months, bonus);
+// create an object
+Employee george = new Employee("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 30, EmployeeType.Manager);
 
-Console.WriteLine($"Yearly wage: {yearlyWage}");
+george.DisplayEmployeeDetails();
 
-Console.ReadLine();
+george.PerformWork();
+george.PerformWork(5);
+george.PerformWork();
 
+double receivedWageGeorge = george.ReceiveWage(true);
+Console.WriteLine($"Wage paid: {receivedWageGeorge}");
+
+WorkTask task;
+task.description = "Bake delicious pies";
+task.hours = 3;
+task.PerformWorkTask();

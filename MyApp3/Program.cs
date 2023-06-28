@@ -1,4 +1,4 @@
-﻿using HRapp;
+﻿using HRapp.HR;
 
 Console.WriteLine("Creating an employee");
 Console.WriteLine("--------------------\n");

@@ -1,4 +1,4 @@
-namespace HRapp
+namespace HRapp.HR
 {
   internal class Employee
   {

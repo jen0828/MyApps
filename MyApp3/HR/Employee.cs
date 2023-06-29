@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace HRapp.HR
 {
-  public class Employee
+  public class Employee: IEmployee
   {
     private string firstName;
     private string lastName;

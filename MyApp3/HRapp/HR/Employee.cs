@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace HRapp.HR
 {
-  public class Employee: IEmployee
+  public class Employee : IEmployee
   {
     private string firstName;
     private string lastName;
@@ -134,7 +134,7 @@ namespace HRapp.HR
     public void PerformWork(int numberOfHours)
     {
       NumberOfHoursWorked += numberOfHours;
-      NumberOfHoursWorked++;
+      //NumberOfHoursWorked++;
 
       Console.WriteLine($"{FirstName} {LastName} has worked for {numberOfHours} hour(s)!");
     }

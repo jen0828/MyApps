@@ -1,0 +1,15 @@
+# .NET Core
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.userprefs
+
+# Visual Studio Code
+.vscode/
+.vs/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/

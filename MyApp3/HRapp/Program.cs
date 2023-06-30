@@ -1,60 +1,59 @@
-﻿using HRapp.HR;
-
-Console.WriteLine("Creating an employee");
-Console.WriteLine("--------------------\n");
-
-// Employee george = new Employee("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 30, EmployeeType.Manager);
-
-// george.DisplayEmployeeDetails();
-
-// george.PerformWork();
-// george.PerformWork(5);
-// george.PerformWork();
-
-// Employee jake = new Employee("Jake", "Nicols", "jake@snowball.be", new DateTime(1995, 8, 16), 25, "New street", "123", "123456", "Pie Ville");
-// string streetName = jake.Address.Street;
-// Console.WriteLine($"{jake.FirstName} lives on {jake.Address.Street}");
-
-// Address newAddress = new Address("Another street", "444", "999999", "Donut town");
-// jake.Address = newAddress;
-// Console.WriteLine($"{jake.FirstName} moved to {jake.Address.Street} in {jake.Address.City}");
-
-// Employee bethany = new Employee("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
-// Manager mary = new Manager("Mary", "Jones", "mary@snowball.be", new DateTime(1965, 1, 16), 30);
-
-// bethany.DisplayEmployeeDetails();
-// bethany.PerformWork();
-// bethany.PerformWork(5);
-// bethany.PerformWork();
-// bethany.ReceiveWage();
-
-// mary.DisplayEmployeeDetails();
-// mary.PerformWork();
-// mary.PerformWork(11);
-// mary.PerformWork();
-// mary.ReceiveWage();
-
-// mary.AttendManagementMeeting();
+﻿using HRapp;
+using HRapp.HR;
 
 
-IEmployee bethany = new StoreManager("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
-IEmployee mary = new Manager("Mary", "Jones", "mary@snowball.be", new DateTime(1965, 1, 16), 30);
-IEmployee kevin = new StoreManager("Kevin", "Marks", "kevin@snowball.be", new DateTime(1953, 12, 12), 10);
-IEmployee kate = new StoreManager("Kate", "Greggs", "kate@snowball.be", new DateTime(1993, 8, 8), 10);
+List<Employee> employees = new List<Employee>();
 
-List<IEmployee> employees = new List<IEmployee>();
-employees.Add(bethany);
-employees.Add(mary);
-employees.Add(kevin);
-employees.Add(kate);
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("***********************************");
+Console.WriteLine("* Jenny's Shop Employee App *");
+Console.WriteLine("***********************************");
+Console.ForegroundColor = ConsoleColor.White;
 
-foreach (var employee in employees)
+string userSelection;
+Console.ForegroundColor = ConsoleColor.Blue;
+
+Utilities.CheckForExistingEmployeeFile();
+
+do
 {
-  employee.PerformWork();
-  employee.ReceiveWage();
-  employee.DisplayEmployeeDetails();
-  employee.GiveBonus();
-  //employee.AttendManagementMeeting();
-}
+  Console.ForegroundColor = ConsoleColor.Cyan;
+  Console.WriteLine($"Loaded {employees.Count} employee(s)\n\n");
 
-Console.ReadLine();
+  Console.ForegroundColor = ConsoleColor.White;
+  Console.WriteLine("********************");
+  Console.WriteLine("* Select an action *");
+  Console.WriteLine("********************");
+
+  Console.WriteLine("1: Register employee");
+  Console.WriteLine("2: View all employees");
+  Console.WriteLine("3: Save data");
+  Console.WriteLine("4: Load data");
+  Console.WriteLine("9: Quit application");
+  Console.Write("Your selection: ");
+
+  userSelection = Console.ReadLine();
+
+  switch (userSelection)
+  {
+    case "1":
+      Utilities.RegisterEmployee(employees);
+      break;
+    case "2":
+      Utilities.ViewAllEmployees(employees);
+      break;
+    case "3":
+      Utilities.SaveEmployees(employees);
+      break;
+    case "4":
+      Utilities.LoadEmployees(employees);
+      break;
+    case "9": break;
+    default:
+      Console.WriteLine("Invalid selection. Please try again.");
+      break;
+  }
+}
+while (userSelection != "9");
+
+Console.WriteLine("Thanks for using the application");

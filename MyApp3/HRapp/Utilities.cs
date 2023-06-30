@@ -5,7 +5,7 @@ namespace HRapp
 {
   internal class Utilities
   {
-    private static string directory = @"\data\HRapp\";
+    private static string directory = @"/Users/your-username/data/HRapp/"; // Replace "your-username" with your actual macOS username.
     private static string fileName = "employees.txt";
 
     internal static void RegisterEmployee(List<Employee> employees)
@@ -76,7 +76,7 @@ namespace HRapp
       }
       else
       {
-        
+
         if (!Directory.Exists(path))
           Directory.CreateDirectory(directory);
         Console.WriteLine("Directory is ready for saving files.");
@@ -100,7 +100,7 @@ namespace HRapp
       {
         employees.Clear();
 
-        
+
         string[] employeesAsString = File.ReadAllLines(path);
         for (int i = 0; i < employeesAsString.Length; i++)
         {
@@ -143,7 +143,7 @@ namespace HRapp
 
     internal static void SaveEmployees(List<Employee> employees)
     {
-      
+
       string path = $"{directory}{fileName}";
       StringBuilder sb = new StringBuilder();
 

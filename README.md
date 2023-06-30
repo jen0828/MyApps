@@ -14,7 +14,7 @@ $ cd MyApps
 
 ### Run a Console App
 
-Navigate to the desired app's directory. For example, to run the HRapp app, use the following command:
+Navigate to the desired app's directory. For example, to run the HRapp, use the following command:
 
 ```
 $ cd MyApp3/HRapp

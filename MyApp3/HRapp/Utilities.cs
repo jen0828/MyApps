@@ -34,7 +34,7 @@ namespace HRapp
       string email = Console.ReadLine();
 
       Console.Write("Enter the birth day: ");
-      DateTime birthDay = DateTime.Parse(Console.ReadLine());
+      DateTime birthDay = DateTime.Parse(Console.ReadLine()); //DateTime.Parse method (e.g."MM/dd/yyyy")
 
       Console.Write("Enter the hourly rate: ");
       string hourlyRate = Console.ReadLine();

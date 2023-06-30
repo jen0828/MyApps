@@ -34,11 +34,11 @@ namespace HRapp
       string email = Console.ReadLine();
 
       Console.Write("Enter the birth day: ");
-      DateTime birthDay = DateTime.Parse(Console.ReadLine());//ex. 2/16/2008
+      DateTime birthDay = DateTime.Parse(Console.ReadLine());
 
       Console.Write("Enter the hourly rate: ");
       string hourlyRate = Console.ReadLine();
-      double rate = double.Parse(hourlyRate);//we will assume here that input is in the correct format
+      double rate = double.Parse(hourlyRate);
 
       Employee employee = null;
 
@@ -76,7 +76,7 @@ namespace HRapp
       }
       else
       {
-        //Create the airectory already
+        
         if (!Directory.Exists(path))
           Directory.CreateDirectory(directory);
         Console.WriteLine("Directory is ready for saving files.");
@@ -100,7 +100,7 @@ namespace HRapp
       {
         employees.Clear();
 
-        //now read the file
+        
         string[] employeesAsString = File.ReadAllLines(path);
         for (int i = 0; i < employeesAsString.Length; i++)
         {
@@ -143,9 +143,7 @@ namespace HRapp
 
     internal static void SaveEmployees(List<Employee> employees)
     {
-      //First, we are going to convert employee data to a string
-      //Alternatively, we could again use JSON.NET and store them as JSON
-
+      
       string path = $"{directory}{fileName}";
       StringBuilder sb = new StringBuilder();
 

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTinyBank", "MyApp1\MyTiny
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATMapp", "MyApp2\ATMapp.csproj", "{B51B47A9-78BB-4483-9C1F-D2958AA28561}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRapp", "MyApp3\HRapp.csproj", "{F5EEB5E3-1CA5-4C23-A9A8-6DAA0E4A84D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRapp", "MyApp3\HRapp\HRapp.csproj", "{F5EEB5E3-1CA5-4C23-A9A8-6DAA0E4A84D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

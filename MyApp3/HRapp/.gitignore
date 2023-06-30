@@ -5,5 +5,3 @@ obj/
 # Visual Studio Code files
 .vscode/
 
-# Data output
-\\data\HRapp\employees.txt

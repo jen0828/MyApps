@@ -1,1 +1,0 @@
-firstName:Jenny;lastName:Moon;email:test@test.mail;birthDay:10/10/2023;hourlyRate:5000;type:1;
